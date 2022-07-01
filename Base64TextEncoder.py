@@ -3,7 +3,7 @@ import StringBuilder as sb
 from Base64EncoderMapping import get_mapping
 
 def encode_base64(text) -> str:
-    binary_to_base64 = sb.StringBuilder()
+    decimal_to_base64 = sb.StringBuilder()
     counter=0
     ni=0 # next item
 
@@ -13,14 +13,14 @@ def encode_base64(text) -> str:
         char_to_binary_value = char_to_binary[ni:ni+6:]
         binary_value = '{:<06s}'.format(char_to_binary_value)
         decimal_value = int(binary_value, 2)
-        binary_to_base64.Append(get_mapping(decimal_value))
+        decimal_to_base64.Append(get_mapping(decimal_value))
 
         ni+= 6
         counter += 1
 
     if len(char_to_binary) % 3 == 2:
-        binary_to_base64.Append('==')
+        decimal_to_base64.Append('==')
     else:
-        binary_to_base64.Append('=')
+        decimal_to_base64.Append('=')
 
-    return binary_to_base64
+    return decimal_to_base64

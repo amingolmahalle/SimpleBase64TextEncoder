@@ -7,4 +7,4 @@ while(True):
         exit()
         
     print('result is: ')
-    print(encode_base64(text))
+    print(encode_base64(text))  
