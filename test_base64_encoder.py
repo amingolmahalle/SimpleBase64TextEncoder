@@ -15,7 +15,7 @@ class test_base64_encoder(unittest.TestCase):
     def test_anything(self):
         self.assertEqual(encode_base64("amin1213ABC") , "YW1pbjEyMTNBQkM=", "Should be YW1pbjEyMTNBQkM=")
     
-    def test_longText(self):
+    def test_long_text(self):
         self.assertEqual(
             encode_base64("0012:Change your body, change your life!"),
              "MDAxMjpDaGFuZ2UgeW91ciBib2R5LCBjaGFuZ2UgeW91ciBsaWZlIQ==",
