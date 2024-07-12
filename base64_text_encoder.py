@@ -5,7 +5,7 @@ from base64_encoder_mapping import get_mapping
 def encode_base64(text) -> str:
     decimal_to_base64 = string_builder()
     counter = 0
-    ni = 0 # next item
+    ni = 0 #next item
 
     char_to_binary = ''.join('{0:08b}'.format(ord(char), 'b') for char in text)
 
